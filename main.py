@@ -8,11 +8,11 @@ def count_batteries_by_health(present_capacities):
     rated_capacity=120
     soh=(present_capacity/rated_capacity)
 
-    if soh>75 and soh<=100:
+    if soh>80 and soh<=100:
       healthy_count+=1
-    elif soh>=50 and soh<=75:
+    elif soh>=62 and soh<=80:
       exchange_count+=1
-    elif soh<50:
+    elif soh<62:
       failed_count+=1
   return {
     "healthy": healthy_count,
